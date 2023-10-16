@@ -18,29 +18,18 @@
 
 // reactstrap components
 import {
-    Button,
-    Card,
-    CardHeader,
-    CardBody,
-    FormGroup,
-    Form,
-    Input,
     Container,
     Row,
     Col,
-    Toast,
-    ToastBody
   } from "reactstrap";
-  // core components
-  import UserHeader from "components/Headers/UserHeader.js";
+
+import {isMobile} from 'react-device-detect';
+
 import QrCodeUploader from "components/QrUploader/qrCodeUploader";
-import ToastAction from "components/Toast/toast";
 import MobileQrScanner from "components/MobileQrScanner/mobileQrScanner";
   
   const Profile = () => {
-    const onClickScan = () => {
-
-    }
+      console.log('isMobileisMobile',isMobile)
     return (
       <>
         <div
@@ -64,8 +53,10 @@ import MobileQrScanner from "components/MobileQrScanner/mobileQrScanner";
                Redeem Your Coupons Here
               </p>
               <QrCodeUploader />
-              <MobileQrScanner />
-
+               {
+                isMobile && 
+                <MobileQrScanner />
+               }
             </Col>
           </Row>
         </Container>

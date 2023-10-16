@@ -73,6 +73,8 @@ const MobileQrScanner = () => {
          </ModalFooter>
        </Modal>
       {data !== "" && <p className="text-green font-bold">{data}</p>}
+      <ToastContainer />
+
     </div>
   );
 };
