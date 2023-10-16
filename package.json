@@ -44,7 +44,6 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "6.4.0",
     "@openhealthnz-credentials/pdf-image-qr-scanner": "^1.0.2",
-    "barcode-react-scanner": "^1.2.0",
     "bootstrap": "4.6.2",
     "chart.js": "2.9.4",
     "classnames": "2.3.2",

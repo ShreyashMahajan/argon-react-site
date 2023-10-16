@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {QrReader} from "react-qr-reader";
+import QrReader from "react-qr-reader";
 
 const MobileQrScanner = () => {
   const [startScan, setStartScan] = useState(false);
