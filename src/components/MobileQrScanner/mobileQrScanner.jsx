@@ -2,7 +2,6 @@ import { useState } from "react";
 import {QrReader} from "react-qr-reader";
 
 const MobileQrScanner = () => {
-  const [selected, setSelected] = useState("environment");
   const [startScan, setStartScan] = useState(false);
   const [loadingScan, setLoadingScan] = useState(false);
   const [data, setData] = useState("");
@@ -23,12 +22,7 @@ const MobileQrScanner = () => {
   };
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>
-        Last Scan:
-        {selected}
-      </h2>
-
+     
       <button
         onClick={() => {
           setStartScan(!startScan);
@@ -38,16 +32,11 @@ const MobileQrScanner = () => {
       </button>
       {startScan && (
         <>
-          <select onChange={(e) => setSelected(e.target.value)}>
-            <option value={"environment"}>Back Camera</option>
-            <option value={"user"}>Front Camera</option>
-          </select>
           <QrReader
-            facingMode={selected}
+            facingMode="environment"
             delay={1000}
             onError={handleError}
             onScan={handleScan}
-            // chooseDeviceId={()=>selected}
             style={{ width: "300px" }}
           />
         </>
