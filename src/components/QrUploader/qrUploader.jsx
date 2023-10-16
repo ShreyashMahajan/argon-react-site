@@ -3,6 +3,7 @@ import { Button , Spinner  } from "reactstrap";
 import { fakeQrValidator, toastMessageDisplay } from "./qrCodeHelper";
 import { ToastContainer, toast } from "react-toastify";
 import { css } from "glamor";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 

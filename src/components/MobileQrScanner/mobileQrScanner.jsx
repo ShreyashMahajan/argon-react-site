@@ -5,6 +5,8 @@ import QrReader from "react-qr-reader";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Spinner } from 'reactstrap';
 import { ToastContainer, toast } from "react-toastify";
 import { css } from "glamor";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const MobileQrScanner = () => {
@@ -17,10 +19,10 @@ const MobileQrScanner = () => {
         setLoadingScan(true);
         fakeQrValidator('Something went wrong', false).then( response => {
           toastMessageDisplay(response.type, response.message, toast, css)
+          setLoadingScan(false)
         }).catch( (error) => {
           setLoadingScan(false)
         } )
-       setLoadingScan(false)
      }
   }, [data] )
 
