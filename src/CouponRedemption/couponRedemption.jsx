@@ -65,13 +65,7 @@ import MobileQrScanner from "components/MobileQrScanner/mobileQrScanner";
               </p>
               <QrCodeUploader />
               <MobileQrScanner />
-              <Button
-                color="info"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
-              >
-                Scan
-              </Button>
+
             </Col>
           </Row>
         </Container>
