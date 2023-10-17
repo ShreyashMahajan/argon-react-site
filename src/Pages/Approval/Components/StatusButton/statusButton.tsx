@@ -34,6 +34,20 @@ const StatusButton:React.FC<ComponentProps> = () => {
       })
     }
 
+    const displayDeclinedToast = (message: string) => {
+        return  toast.error(message, {
+         position: "top-right",
+         autoClose: 5000,
+         hideProgressBar: false,
+         closeOnClick: true,
+         pauseOnHover: true,
+         draggable: true,
+         // className: css({
+         //   background: "#1ab394 !important"
+         // })
+       })
+     }
+
 
     const handleOnApprove = () => {
         const approveBtnStatus = {
@@ -41,7 +55,7 @@ const StatusButton:React.FC<ComponentProps> = () => {
             isApprove: true
         }
         setBtnStatusInfo({...approveBtnStatus});
-        displaySuccessToast('Approved Successfully')
+        displaySuccessToast('Approved')
     
     }
      
@@ -51,7 +65,7 @@ const StatusButton:React.FC<ComponentProps> = () => {
             isDeclined: true
         }; 
         setBtnStatusInfo({...declinedBtnStatus});
-        displaySuccessToast('Declined Successfully')
+        displayDeclinedToast('Declined')
 
     }
       
