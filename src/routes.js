@@ -22,7 +22,7 @@ import Register from "views/examples/Register.js";
 import Login from "views/examples/Login.js";
 import CouponRedemption from "CouponRedemption/couponRedemption.jsx"
 import Icons from "views/examples/Icons.js";
-import QrCodeUploader from "components/QrUploader/qrCodeUploader";
+import Approval from "Pages/Approval/approval.tsx"
 
 var routes = [
   {
@@ -61,10 +61,10 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/index",
+    path: "/approval",
     name: "Approval",
     icon: "ni ni-bullet-list-67 text-red",
-    component: <Profile />,
+    component: <Approval />,
     layout: "/admin",
   },
   {
